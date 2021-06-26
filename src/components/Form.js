@@ -1,8 +1,13 @@
 import React from "react"
 
-const Form = props => {
+const handleSubmit = (event) => {
+  event.preventDefault()
+  alert("test")
+}
+
+const Form = (props) => {
   return (
-    <form className="w-full max-w-sm mx-auto">
+    <form className="w-full max-w-sm mx-auto" onSubmit={handleSubmit}>
       <div className="mt-10 flex">
         <input
           type="text"
